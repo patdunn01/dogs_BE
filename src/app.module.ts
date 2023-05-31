@@ -8,7 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     DogsModule,
     MongooseModule.forRoot(
-      'mongodb+srv://patdunn01:DGgvTkgyf6KF9oLU@dogs0.l7y3cob.mongodb.net/',
+      'mongodb+srv://patdunn01:DGgvTkgyf6KF9oLU@dogs0.l7y3cob.mongodb.net/?retryWrites=true&w=majority',
     ),
   ],
   controllers: [AppController],
