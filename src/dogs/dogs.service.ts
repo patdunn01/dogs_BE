@@ -49,7 +49,7 @@ export class DogsService {
       bio: dog.bio,
       childFriendly: dog.childFriendly,
       dogFriendly: dog.dogFriendly,
-      url: dog.url,
+      image: dog.image,
     };
   }
 
