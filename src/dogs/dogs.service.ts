@@ -59,12 +59,12 @@ export class DogsService {
   private async findDog(breed: string): Promise<Dog> {
     let dog;
     try {
-      dog = await this.dogModel.findById(breed).exec();
+      dog = await this.dogModel.findOne({ breed });
     } catch (error) {
-      throw new NotFoundException('Could not find product.');
+      throw new NotFoundException('Could not find dog.');
     }
     if (!dog) {
-      throw new NotFoundException('Could not find product.');
+      throw new NotFoundException('Could not find dog.');
     }
     return dog;
   }
