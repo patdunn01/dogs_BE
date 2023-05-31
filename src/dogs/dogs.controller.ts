@@ -15,6 +15,7 @@ export class DogsController {
     @Body('childFriendly') childFriendly: string,
     @Body('dogFriendly') dogFriendly: string,
     @Body('image') image: string,
+    @Body('script') script: string,
   ) {
     const generatedDogId = await this.dogsService.insertDogs(
       id,
@@ -25,6 +26,7 @@ export class DogsController {
       childFriendly,
       dogFriendly,
       image,
+      script,
     );
     return generatedDogId;
   }

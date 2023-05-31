@@ -8,6 +8,7 @@ export const DogSchema = new mongoose.Schema({
   childFriendly: { type: String, required: true },
   dogFriendly: { type: String, required: true },
   image: { type: String, required: true },
+  script: { type: String, required: true },
 });
 
 export class Dog {
@@ -20,5 +21,6 @@ export class Dog {
     public childFriendly: string,
     public dogFriendly: string,
     public image: string,
+    public script: string,
   ) {}
 }

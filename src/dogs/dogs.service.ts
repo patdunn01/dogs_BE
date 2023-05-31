@@ -18,6 +18,7 @@ export class DogsService {
     childFriendly: string,
     dogFriendly: string,
     image: string,
+    script: string,
   ) {
     const dogId = Date.now();
     const newDog = new this.dogModel({
@@ -29,6 +30,7 @@ export class DogsService {
       childFriendly,
       dogFriendly,
       image,
+      script,
     });
     const result = await newDog.save();
     console.log(result);
@@ -50,6 +52,7 @@ export class DogsService {
       childFriendly: dog.childFriendly,
       dogFriendly: dog.dogFriendly,
       image: dog.image,
+      script: dog.script,
     };
   }
 
